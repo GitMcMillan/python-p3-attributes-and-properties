@@ -37,7 +37,7 @@ class TestPerson:
                job='Sales')
         sys.stdout = sys.__stdout__
         assert(captured_out.getvalue() == "Name must be string between 1 and 25 characters.\n")
-
+    
     def test_valid_name(self):
         '''saves name if string between 1 and 25 characters.'''
         guido = Person("Guido")
@@ -60,3 +60,4 @@ class TestPerson:
         '''saves job if in job list.'''
         guido = Person(job="ITC")
         assert(guido.job == "ITC")
+
